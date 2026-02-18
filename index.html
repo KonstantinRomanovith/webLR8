@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats facts</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <img class="logo" src="static/images/cat_white.png" alt="Cat logo">
+            <div class="title">Facts about cats</div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="search-form">
+                <input type="text" class="search-field" placeholder="Введите поисковый запрос..." autocomplete="off">
+                <button class="search-btn">Найти</button>
+            </div>
+            <div class="pagination-info">
+                <span>
+                    Показывать по
+                    <select name="per-page" class="per-page-btn">
+                        <option>5</option>
+                        <option selected>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
+                    записей на странице
+                </span>
+                <span class="current-interval-info">
+                    Показаны записи с <span class="current-interval-start">1</span> по <span class="current-interval-end">10</span> из <span class="total-count">0</span>
+                </span>
+            </div>
+            <div class="facts-list" data-url="http://cat-facts-api.std-900.ist.mospolytech.ru/facts">
+                <!-- Факты будут загружаться сюда -->
+            </div>
+            <div class="pagination">
+                <!-- Пагинация будет создаваться динамически -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>
