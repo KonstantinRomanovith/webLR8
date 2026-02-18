@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    background-color: #F2F5F1;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #1d3557;
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+    .header > nav {
+        display: flex;
+        align-items: center;
+    }
+
+.title {
+    margin-left: 20px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.facts-list-item {
+    margin-top: 20px;
+    background-color: #d7d7d7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item-content {
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.item-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #1d3557;
+    color: white;
+    font-weight: bold;
+}
+
+.author-name {
+    flex-grow: 1;
+}
+
+.upvotes {
+    background-image: url('images/upvote_white.png');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.pagination-info {
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.current-interval-info {
+    margin-left: auto;
+}
+
+.per-page-btn {
+    background-color: white;
+    font-size: 16px;
+    border: 2px solid #e63946;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+    .per-page-btn:hover {
+        background-color: #e63946;
+        color: white;
+    }
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    height: 40px;
+}
+
+.btn {
+    background-color: #e63946;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    border: 2px solid #e63946;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #F2F5F1;
+        color: #e63946;
+    }
+
+.active {
+    background-color: #F2F5F1;
+    color: #e63946;
+}
+
+.first-page-btn, .last-page-btn {
+    width: 200px;
+}
+
+.pages-btns {
+    display: flex;
+    gap: 5px;
+}
+
+    .pages-btns > button {
+        min-width: 40px;
+    }
+
+.search-form {
+    margin: 40px 0;
+    display: flex;
+    position: relative;
+}
+
+.search-field {
+    flex-grow: 1;
+    height: 50px;
+    border: 2px solid #e63946;
+    border-radius: 8px 0 0 8px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+    .search-field:focus {
+        box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+    }
+
+.search-btn {
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #e63946;
+    border: 2px solid #e63946;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .search-btn:hover {
+        background-color: #F2F5F1;
+        color: #e63946;
+    }
+
+/* Стили для автодополнения */
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #e63946;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.autocomplete-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    .autocomplete-item:last-child {
+        border-bottom: none;
+    }
+
+    .autocomplete-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .autocomplete-item strong {
+        font-weight: bold;
+        color: #e63946;
+    }
+
+/* Сообщение об отсутствии результатов */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .first-page-btn, .last-page-btn {
+        width: 120px;
+    }
+
+    .pagination-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .current-interval-info {
+        margin-left: 0;
+    }
+
+    .search-field {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .search-btn {
+        padding: 0 20px;
+    }
+}
